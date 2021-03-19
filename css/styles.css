@@ -91,6 +91,7 @@ nav {
   background-image: url(../img/sand-texture3.png);
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
   background-blend-mode: multiply;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -99,7 +100,6 @@ nav {
   left: 0;
   padding-top: 15px;
   margin: 0;
-  z-index: 100;
 }
 
 nav ul {
@@ -155,8 +155,8 @@ nav button {
 .toggle::before,
 .toggle::after {
   display: block;
-  background: white;
-  width: 2em;
+  background: var(--clr-secondary);
+  width: 1.5em;
   height: 3px;
   border-radius: 2px;
   position: relative;
