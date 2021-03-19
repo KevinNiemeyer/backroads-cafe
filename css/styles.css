@@ -84,41 +84,6 @@ header {
   z-index: 999;
 }
 
-.nav-toggle-label {
-  position: relative;
-  top: 5px;
-  left: -10px;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.toggle,
-.toggle::before,
-.toggle::after {
-  display: block;
-  background: white;
-  width: 2em;
-  height: 4px;
-  border-radius: 2px;
-  position: relative;
-}
-
-.toggle::before,
-.toggle::after {
-  content: "";
-  position: absolute;
-}
-
-.toggle::after {
-  top: 7px;
-}
-
-.toggle::before {
-  bottom: 7px;
-}
-
 nav {
   display: none;
   background: var(--clr-accent-dark);
@@ -173,6 +138,42 @@ nav button {
   background-attachment: fixed;
   background-size: cover;
   background-blend-mode: multiply;
+}
+
+.nav-toggle-label {
+  position: relative;
+  top: 5px;
+  left: -10px;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle,
+.toggle::before,
+.toggle::after {
+  display: block;
+  background: white;
+  width: 2em;
+  height: 3px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.toggle::before,
+.toggle::after {
+  content: "";
+  position: absolute;
+}
+
+.toggle::after {
+  top: 7px;
+}
+
+.toggle::before {
+  bottom: 7px;
 }
 
 .nav-toggle:checked ~ nav {
