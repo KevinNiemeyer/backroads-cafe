@@ -71,7 +71,8 @@ header {
 .bg-beige-cloth {
   background: var(--clr-accent-dark);
   background-image: url(../img/sand-texture3.png);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-blend-mode: multiply;
 }
 
@@ -108,7 +109,7 @@ nav {
 }
 
 nav ul {
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
 }
 
