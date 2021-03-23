@@ -71,7 +71,7 @@ header {
 .bg-beige-cloth {
   background: var(--clr-accent-dark);
   background-image: url(../img/sand-texture3.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center center;
   background-blend-mode: multiply;
 }
@@ -81,7 +81,7 @@ header {
   width: 10em;
 }
 
-.mobilemenu {
+.mobile-menu {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -119,4 +119,36 @@ nav li {
 
 .nav-slide {
   right: 0;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5em;
+}
+
+nav a:hover {
+  color: #fce2c6;
+}
+nav a::before,
+nav a::after {
+  content: "\2606";
+  padding: 0 5px;
+}
+#pc-nav {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: blue;
+  }
+  .nav-button {
+    display: none;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  #pc-nav {
+    display: inline-block;
+  }
 }

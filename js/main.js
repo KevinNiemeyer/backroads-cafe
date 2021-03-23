@@ -1,4 +1,4 @@
 function myFunction() {
-  var element = document.getElementById("nav");
+  var element = document.getElementById("mobile-nav");
   element.classList.toggle("nav-slide");
 }
