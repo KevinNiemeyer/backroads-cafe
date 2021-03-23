@@ -27,6 +27,7 @@ body {
   margin: 0;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 img {
@@ -81,44 +82,8 @@ header {
   width: 10em;
 }
 
-.mobile-menu {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  bottom: 0;
-  right: 0;
-}
-
-header h3 {
-  width: 8em;
-  margin: 0;
-  font-size: 1em;
-  text-align: right;
-  cursor: pointer;
-}
-nav {
-  display: inline-block;
-  position: absolute;
-  width: 12em;
-  top: 100%;
-  right: -12em;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-  z-index: 5;
-  transition: all 0.28s cubic-bezier(0, 0, 0.58, 1);
-  overflow-x: hidden;
-}
-
-nav ul {
-  padding: 10px 0;
-  margin: 0;
-}
-
 nav li {
   padding: 10px;
-}
-
-.nav-slide {
-  right: 0;
 }
 
 nav a {
@@ -129,25 +94,66 @@ nav a {
 nav a:hover {
   color: #fce2c6;
 }
+
 nav a::before,
 nav a::after {
   content: "\2606";
   padding: 0 5px;
 }
+
+.mobile-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+}
+
+.mobile-nav {
+  display: inline-block;
+  position: absolute;
+  width: 12em;
+  top: 100%;
+  right: -12em;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  transition: all 0.28s cubic-bezier(0, 0, 0.58, 1);
+}
+
+h3.mobile-nav-button {
+  width: 8em;
+  margin: 0;
+  font-size: 1em;
+  text-align: right;
+  cursor: pointer;
+}
+
+.mobile-nav ul {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.nav-slide {
+  right: 0;
+}
+
 #pc-nav {
   display: none;
+  width: 100%;
+  box-shadow: none;
 }
 
 @media (min-width: 600px) {
   body {
     background: blue;
   }
-  .nav-button {
+
+  .mobile-menu {
     display: none;
   }
-  #mobile-nav {
-    display: none;
+  nav {
   }
+
   #pc-nav {
     display: inline-block;
   }
