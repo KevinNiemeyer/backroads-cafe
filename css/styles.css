@@ -33,11 +33,7 @@ img {
   display: block;
   max-width: 100%;
 }
-/*
-section {
-  padding: 4rem 0 4rem 0;
-}
-*/
+
 ul {
   text-decoration: none;
   list-style: none;
@@ -61,354 +57,64 @@ a {
   text-decoration: none;
 }
 
-/*
-h1 {
-  font-size: 3rem;
-}
-*/
-
-/* Responsive code */
-
 header {
-  background: var(--clr-accent-dark);
-  text-align: center;
-  background-image: url(../img/sand-texture3.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-blend-mode: multiply;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-  font-size: 1rem;
-  padding: 20px 0;
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   z-index: 999;
-}
-
-nav {
-  display: none;
-  background: var(--clr-accent-dark);
-  text-align: center;
-  background-image: url(../img/sand-texture3.png);
-  background-attachment: fixed;
-  background-size: cover;
-  overflow: hidden;
-  background-blend-mode: multiply;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-  position: absolute;
-  text-align: center;
-  top: 100%;
-  left: 0;
-  padding-top: 15px;
-  margin: 0;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  padding-bottom: 20px;
-}
-
-nav a {
-  color: var(--clr-text1);
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-nav a:hover {
-  color: white;
-}
-
-nav a::before,
-nav a::after {
-  content: "\2606";
-  padding: 0 5px;
-}
-
-nav button {
-  font-family: inherit;
-  outline: none;
-  border: none;
-  background: var(--clr-accent-dark);
-  text-align: center;
-  background-image: url(../img/sand-texture3.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-
-.nav-toggle-label {
   position: relative;
-  top: 5px;
-  left: -10px;
+}
+
+.bg-beige-cloth {
+  background: var(--clr-accent-dark);
+  background-image: url(../img/sand-texture3.png);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.logo-img {
   margin-left: 1em;
-  height: 100%;
+  width: 25%;
+}
+
+.mobilemenu {
+  position: absolute;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+}
+
+header h3 {
+  width: 8em;
+  margin: 0;
+  font-size: 1em;
+  text-align: right;
   cursor: pointer;
 }
-
-.toggle,
-.toggle::before,
-.toggle::after {
-  display: block;
-  background: var(--clr-secondary);
-  width: 1.5em;
-  height: 3px;
-  border-radius: 2px;
-  position: relative;
-}
-
-.toggle::before,
-.toggle::after {
-  content: "";
-  position: absolute;
-}
-
-.toggle::after {
-  top: 7px;
-}
-
-.toggle::before {
-  bottom: 7px;
-}
-
-.nav-toggle:checked ~ nav {
-  display: block;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-/*
-header {
-  background: var(--clr-accent-dark);
-  background-image: url(../img/sand-texture3.png);
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-}
-
 nav {
-  z-index: 10;
-  text-align: center;
-  position: fixed;
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  transition: all 0.28s cubic-bezier(0, 0, 0.58, 1);
+  overflow-x: hidden;
 }
+
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
   padding: 0;
-  justify-content: space-around;
-}
-nav a {
-  color: white;
-  font-size: 1rem;
+  margin: 0;
 }
 
 nav li {
   padding: 10px;
 }
 
-*/
-.hero-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.nav-slide {
   right: 0;
-  display: block;
-  color: white;
-  font-size: 52px;
-}
-
-.hero {
-  background-color: #aaa;
-  background-position: bottom center;
-  background-image: url(../img/hero-img.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-blend-mode: multiply;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-/*
-.container {
-  top: 0;
-  bottom: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 10;
-}
-*/
-
-.logo-text {
-  color: var(--clr-text1);
-}
-
-.welcome {
-  background-color: #aaa;
-  background-image: url(../img/backroad.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-blend-mode: multiply;
-  color: white;
-  line-height: 1.5;
-}
-
-.product-showcase > h1 {
-  background: var(--clr-secondary);
-  color: white;
-  background-image: url(../img/sand-texture3.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-
-.product-showcase {
-  background: var(--clr-secondary);
-  background-image: url(../img/sand-texture3.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-.products {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-}
-.product-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.product {
-  background: white;
-  width: 33%;
-  border-radius: 1em;
-  overflow: hidden;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.35);
-  margin: 1em;
-}
-
-.product img {
-  height: 300px;
-  width: 35vw;
-}
-.product__content {
-  padding: 1.5em;
-}
-
-.product__title {
-  color: var(--clr-primary);
-  font-size: 2.5rem;
-  margin-bottom: 0.5em;
-}
-
-.product__ingredients {
-  margin: 1em;
-}
-.fineprint {
-  margin: 1em;
-}
-
-/*
-.btn {
-  font-family: inherit;
-  width: 100%;
-  background: var(--clr-btn1);
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  border: 0;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-
-.btn:focus {
-  outline: none;
-}
-.btn a {
-  color: white;
-}
-*/
-.star {
-  display: inline-block;
-  transition: transform 2s cubic-bezier(0, 1.08, 0.13, 1.03);
-}
-.btn:hover .star {
-  transform: rotate(1440deg);
-}
-
-@keyframes rotate-btn {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-/*
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-btn2);
-  border-radius: 5px;
-  z-index: -1;
-  transition: transform 250ms ease-in;
-  transform: scaleY(0);
-  transform-origin: bottom;
-}
-
-.btn:hover::after,
-.btn:focus::after {
-  transform: scaleY(1);
-}
-*/
-.menu-btn {
-  margin-top: 1.5em;
-  font-size: 1.5em;
-  width: 25%;
-}
-
-.order-online {
-  background: var(--clr-accent-dark);
-  color: var(--clr-text1);
-  background-image: url(../img/sand-texture3.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-.location {
-  background: var(--clr-text1);
-  color: white;
-  background-image: url(../img/sand-texture3.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--clr-secondary);
-  color: white;
-  background-image: url(../img/sand-texture3.png);
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 40vh;
 }
