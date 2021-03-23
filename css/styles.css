@@ -80,6 +80,7 @@ header {
 .logo-img {
   margin-left: 1em;
   width: 10em;
+  mix-blend-mode: multiply;
 }
 
 nav li {
