@@ -97,8 +97,24 @@ nav a:hover {
 
 nav a::before,
 nav a::after {
+  display: inline-block;
   content: "\2606";
   padding: 0 5px;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+  transform-origin: 52% 54%;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .mobile-menu {
